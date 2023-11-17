@@ -11,7 +11,7 @@ function App() {
   const [inputValue, setInputValue] = useState("");
 
   useEffect(() => {
-    const url = `http://www.omdbapi.com/?apikey=c0790adf&s=spider`;
+    const url = `https://www.omdbapi.com/?apikey=c0790adf&s=spider`;
 
     fetchMovies(url);
     fetchFavorites();
@@ -22,7 +22,7 @@ function App() {
     let lcStore = localStorage.getItem("moviesList");
     let lc = JSON.parse(lcStore);
     for (let i in lc) {
-      const url = `http://www.omdbapi.com/?apikey=c0790adf&i=${lc[i]}`;
+      const url = `https://www.omdbapi.com/?apikey=c0790adf&i=${lc[i]}`;
       const res = await fetch(url);
       const data = await res.json();
       tempArr.push(data);
@@ -66,7 +66,7 @@ function App() {
   };
 
   const handleSearch = () => {
-    fetchMovies(`http://www.omdbapi.com/?apikey=c0790adf&s=${inputValue}`);
+    fetchMovies(`https://www.omdbapi.com/?apikey=c0790adf&s=${inputValue}`);
   };
 
   return (
