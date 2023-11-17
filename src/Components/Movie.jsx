@@ -7,7 +7,7 @@ const Movie = ({ movies, addToFavories }) => {
         return (
           <div className="movieItem">
             <div className="imgWrapper">
-              <img src={movie.Poster}></img>
+              <img src={movie.Poster} alt="poster"></img>
             </div>
             <div className="movieFeatMain">
               <h3>{movie.Title}</h3>

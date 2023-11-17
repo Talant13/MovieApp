@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import { useState, useEffect } from "react";
 import Movie from "./Components/Movie";
@@ -7,7 +6,7 @@ import FavMovie from "./Components/FavMovie";
 
 function App() {
   const [movies, setMovies] = useState([]);
-  const [favMovies, setFavMovies] = useState([]);
+  // const [favMovies, setFavMovies] = useState([]);
   const [arr, setArr] = useState([]);
   const [inputValue, setInputValue] = useState("");
 
