@@ -1,5 +1,6 @@
 import "./App.css";
 import { useState, useEffect } from "react";
+import { Button } from "reactstrap";
 import Movie from "./Components/Movie";
 import InputC from "./Components/InputC";
 import FavMovie from "./Components/FavMovie";
@@ -72,15 +73,28 @@ function App() {
   return (
     <div className="App">
       <header className="header">
-        <h1>Movie App</h1>
-        <div>
-          <InputC
-            handleChange={handleChange}
-            inputValue={inputValue}
-            handleSearch={handleSearch}
-          />
-        </div>
+        <h1 style={{ color: "red", fontSize: "50px", fontWeight: "bold" }}>
+          MOVIE APP
+        </h1>
+        <p>Made with LocalStorage</p>
+        <Button
+          color="danger"
+          style={{
+            fontSize: "15px",
+            fontWeight: "bold",
+            width: "100px",
+            height: "50px",
+          }}>
+          Sign IN
+        </Button>
       </header>
+
+      <InputC
+        handleChange={handleChange}
+        inputValue={inputValue}
+        handleSearch={handleSearch}
+      />
+
       <div className="moviesWrapper">
         {!movies > 0 ? null : (
           <Movie addToFavories={addToFavories} movies={movies} />

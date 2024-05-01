@@ -1,17 +1,27 @@
 import React from "react";
-import { InputGroup, Input, Button } from "reactstrap";
+import { InputGroup, Input, Button, Navbar } from "reactstrap";
 
 export default function InputC({ handleChange, inputValue, handleSearch }) {
   return (
-    <InputGroup>
-      <Input
-        placeholder="Type movie name..."
-        onChange={handleChange}
-        value={inputValue}
-      />
-      <Button color="secondary" onClick={() => handleSearch()}>
-        Search
-      </Button>
-    </InputGroup>
+    <div
+      style={{
+        marginTop: "40px",
+        marginBottom: "40px",
+        display: "flex",
+        width: "40%",
+        height: "40px",
+        margin: "auto",
+      }}>
+      <InputGroup>
+        <Input
+          placeholder="Type movie name..."
+          onChange={handleChange}
+          value={inputValue}
+        />
+        <Button color="secondary" onClick={() => handleSearch()}>
+          Search
+        </Button>
+      </InputGroup>
+    </div>
   );
 }

@@ -8,7 +8,7 @@ export default function FavMovie({ favMovies, addToFavories, removeFavories }) {
               <img src={movie.Poster} alt="poster"></img>
             </div>
             <div className="movieFeatMain">
-              <h3>{movie.Title}</h3>
+              <h5>{movie.Title}</h5>
 
               <button
                 className="removed"
