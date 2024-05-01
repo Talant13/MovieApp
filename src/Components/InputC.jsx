@@ -1,5 +1,5 @@
 import React from "react";
-import { InputGroup, Input, Button, Navbar } from "reactstrap";
+import { InputGroup, Input, Button } from "reactstrap";
 
 export default function InputC({ handleChange, inputValue, handleSearch }) {
   return (
